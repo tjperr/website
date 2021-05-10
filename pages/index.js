@@ -1,18 +1,17 @@
-import Layout, { siteTitle } from "../components/layout";
-
 import Head from "next/head";
+import Layout from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 
 export default function Home() {
   return (
-    <Layout home>
+    <Layout home name="Thomas Perrett" image="/images/profile.jpg">
       <Head>
-        <title>{siteTitle}</title>
+        <title>{"Thomas Perrett"}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>Hello, I'm A. cake.</p>
         <p>
-          Welcome to my <a href="/">website</a>.
+          Hi 👋 - I'm a Data Scientist and recovering{" "}
+          <a href="/ac">Graph Theorist</a> working at Capital One UK .
         </p>
       </section>
     </Layout>
