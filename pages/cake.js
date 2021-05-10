@@ -5,7 +5,7 @@ import utilStyles from "../styles/utils.module.css";
 
 export default function Home() {
   return (
-    <Layout home name="Tom Perrett" image="/images/profile.jpg">
+    <Layout home name="A. Cake" image="/images/profile.jpg">
       <Head>
         <title>{siteTitle}</title>
       </Head>

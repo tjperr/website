@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 
-export const siteTitle = "A. Cake Website";
+export const siteTitle = "Thomas Perrett";
 
 export default function Layout({ children, home, name, image }) {
   return (
