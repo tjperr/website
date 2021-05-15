@@ -4,13 +4,13 @@ import utilStyles from "../styles/utils.module.css";
 
 export default function Home() {
   return (
-    <Layout home name="Thomas Perrett" image="/images/profile.jpg">
+    <Layout home name="Thomas Perrett" image="/images/cake.jpg">
       <Head>
         <title>{"Thomas Perrett"}</title>
       </Head>
       <section className={utilStyles.headingMd}>
         <p>
-          Hi 👋 - I'm a Data Scientist and recovering{" "}
+          Hi 👋 - I'm a Data Scientist and former{" "}
           <a href="/ac">Graph Theorist</a> working at Capital One UK .
         </p>
       </section>
