@@ -14,6 +14,12 @@ export default function Home() {
           <a href="/ac">Graph Theorist</a> working at{" "}
           <a href="https://capitalone.co.uk/">Capital One UK</a>.
         </p>
+
+        <p>
+          Find me on <a href="https://github.com/tjperr">GitHub</a>,{" "}
+          <a href="https://www.linkedin.com/in/tomperrett/">LinkedIn</a>, or
+          check out my <a href="/pp">personal projects</a>.
+        </p>
       </section>
     </Layout>
   );
