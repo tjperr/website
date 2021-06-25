@@ -30,10 +30,8 @@ export default function Home() {
           <a href="https://tjperr.github.io/chromatic-polynomial/">
             Chromatic Polynomial Calculator
           </a>
-          : The chromatic polynomial is a polynomial associated to a graph. It
-          counts the number of graph colorings as a function of the number of
-          colors. This application enables the user to draw a graph and obtain
-          its chromatic polynomial.
+          : Draw a graph and calculate its chromatic polynomial, a function that
+          enumerates the colourings of the graph.
         </p>
       </section>
     </Layout>
