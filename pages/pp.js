@@ -23,7 +23,7 @@ export default function Home() {
         </p>
 
         <p>
-          <a href="https://saffron-drawful.herokuapp.com/">Awful Drawful</a>: A
+          <a href="https://awful-drawful.herokuapp.com/">Awful Drawful</a>: A
           reimplemetation of the classic Jackbox party game.
         </p>
         <p>
