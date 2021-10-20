@@ -3,14 +3,15 @@ import { useEffect, useState } from "react";
 import { ResponsiveCalendarCanvas } from "@nivo/calendar";
 
 function transform(d) {
-  return Object.entries(d).map((entry) => {
+  const x = Object.entries(d).map((entry) => {
     const [key, value] = entry;
     return { value: Number(value), day: key };
   });
+  return x;
 }
 
 export function CallAPI() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([{ value: 2, day: "2021-01-01" }]);
 
   useEffect(() => {
     fetch(
