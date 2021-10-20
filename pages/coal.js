@@ -11,9 +11,7 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>Under construction...</p>
         <CallAPI />
-        <p>An awesome coal free grapic</p>
       </section>
     </Layout>
   );
