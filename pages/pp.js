@@ -18,7 +18,7 @@ export default function Home() {
         <h2>Personal Projects</h2>
         <p>
           <a href="https://saffron-connect-four.herokuapp.com/">Connie</a>: Play
-          connect four against Connie, a nerual network that's learnt to play by
+          connect four against Connie, a neural network that's learnt to play by
           playing thousands of games against itself.
         </p>
 
