@@ -3,15 +3,22 @@ import { useEffect, useState } from "react";
 import { ResponsiveCalendarCanvas } from "@nivo/calendar";
 
 function transform(d) {
-  const x = Object.entries(d).map((entry) => {
+  return Object.entries(d).map((entry) => {
     const [key, value] = entry;
     return { value: Number(value), day: key };
   });
-  return x;
+}
+
+function minMaxDate(data) {
+  const days = data.map((entry) => {
+    return entry["day"];
+  });
+  days.sort();
+  return [days[0], days.slice(-1)[0]];
 }
 
 export function CallAPI() {
-  const [data, setData] = useState([{ value: 2, day: "2021-01-01" }]);
+  const [data, setData] = useState([{ value: 2, day: "2020-01-01" }]);
 
   useEffect(() => {
     fetch(
@@ -24,10 +31,11 @@ export function CallAPI() {
   return (
     <div style={{ height: 200 }}>
       <p>{JSON.stringify(data)}</p>
+
       <ResponsiveCalendarCanvas
         data={data}
-        from="2021-03-01"
-        to="2022-07-12"
+        from={minMaxDate(data)[0]}
+        to={minMaxDate(data)[1]}
         emptyColor="#eeeeee"
         colors={["#61cdbb", "#97e3d5", "#e8c1a0", "#f47560"]}
         margin={{ top: 40, right: 40, bottom: 40, left: 40 }}
