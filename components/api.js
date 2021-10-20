@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 
 import { ResponsiveCalendarCanvas } from "@nivo/calendar";
 
-function transform(d) {
-  return Object.entries(d).map((entry) => {
+function transform(data) {
+  return Object.entries(data).map((entry) => {
     const [key, value] = entry;
     return { value: Number(value), day: key };
   });
@@ -25,7 +25,7 @@ export function CallAPI() {
       "https://3nlr2xgsh9.execute-api.us-east-1.amazonaws.com/Prod/dataread"
     )
       .then((res) => res.json())
-      .then((dat) => setData(transform(dat)));
+      .then((data) => setData(transform(data)));
   }, []);
 
   return (
