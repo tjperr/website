@@ -1,9 +1,9 @@
 import { ResponsiveCalendarCanvas, day } from "@nivo/calendar";
 import { useEffect, useState } from "react";
 
-function transform(data) {
+function transform(response) {
   // transform the data to the formate expected by the calendar component
-  return Object.entries(data).map((entry) => {
+  return Object.entries(response).map((entry) => {
     const [key, value] = entry;
     return { value: Number(value), day: key };
   });
@@ -19,7 +19,7 @@ function minMaxDate(data) {
 }
 
 export function CallAPI() {
-  const [data, setData] = useState([{ value: 2, day: "2020-01-01" }]);
+  const [data, setData] = useState([{ value: 0, day: "2021-01-01" }]);
 
   useEffect(() => {
     fetch(
@@ -37,9 +37,9 @@ export function CallAPI() {
         minValue={0}
         from={minMaxDate(data)[0]}
         to={minMaxDate(data)[1]}
-        emptyColor="#eeeeee"
-        scheme="red_yellow_green"
-        //colors={["#7ecc78", "#eeeeee", "#e8c1a0", "#000000"]}
+        emptyColor="#ffffff"
+        //scheme="red_yellow_green"
+        colors={["#eeeeee", "#000000"]}
         margin={{ top: 40, right: 40, bottom: 40, left: 40 }}
         yearSpacing={40}
         monthBorderColor="#ffffff"

@@ -11,15 +11,16 @@ export default function Home() {
         <title>Coal Free</title>
       </Head>
       <h2>Coal Free</h2>
-      For the last few years, the guardian has served{" "}
-      <a href="https://www.theguardian.com/environment/ng-interactive/2019/may/25/the-power-switch-tracking-britains-record-coal-free-run">
-        an awesome graphic
-      </a>
-      , showing the UK's move away from coal for electricity generation. As this
-      recently stopped updating, I decided to reimplement the page here:
+      The chart below shows the poportion of electricity generated in the UK
+      using coal.
       <section className={utilStyles.headingMd}>
         <CallAPI />
       </section>
+      This is a reimplemetation of{" "}
+      <a href="https://www.theguardian.com/environment/ng-interactive/2019/may/25/the-power-switch-tracking-britains-record-coal-free-run">
+        a graphic in the guardian
+      </a>{" "}
+      which stopped updating in May 2021.
     </Layout>
   );
 }
