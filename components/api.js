@@ -30,16 +30,16 @@ export function CallAPI() {
   }, []);
 
   return (
-    <div style={{ height: 200 }}>
+    <div style={{ height: 500 }}>
       <ResponsiveCalendarCanvas
         data={data}
-        maxValue={100}
+        maxValue={5}
         minValue={0}
         from={minMaxDate(data)[0]}
         to={minMaxDate(data)[1]}
         emptyColor="#ffffff"
-        //scheme="red_yellow_green"
-        colors={["#eeeeee", "#000000"]}
+        scheme="red_yellow_green"
+        //colors={["#eeeeee", "#000000"]}
         margin={{ top: 40, right: 40, bottom: 40, left: 40 }}
         yearSpacing={40}
         monthBorderColor="#ffffff"
