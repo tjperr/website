@@ -18,6 +18,20 @@ function minMaxDate(data) {
   return [days[0], days.slice(-1)[0]];
 }
 
+function colourScale() {
+  var hex_numbers = [];
+
+  for (let i = 16 * 16 - 1; i > 16 - 1; i--) {
+    hex_numbers.push(i.toString(16));
+  }
+
+  var cols = hex_numbers.map((x) => {
+    return "#" + x.toString() + x.toString() + x.toString();
+  });
+  cols = ["#00bd32", ...cols];
+  return cols;
+}
+
 export function CallAPI() {
   const [data, setData] = useState([{ value: 0, day: "2021-01-01" }]);
 
@@ -33,15 +47,14 @@ export function CallAPI() {
     <div style={{ height: 500 }}>
       <ResponsiveCalendarCanvas
         data={data}
-        maxValue={5}
+        maxValue={30}
         minValue={0}
         from={minMaxDate(data)[0]}
         to={minMaxDate(data)[1]}
         emptyColor="#ffffff"
-        scheme="red_yellow_green"
-        //colors={["#eeeeee", "#000000"]}
+        colors={colourScale()}
         margin={{ top: 40, right: 40, bottom: 40, left: 40 }}
-        yearSpacing={40}
+        yearSpacing={20}
         monthBorderColor="#ffffff"
         dayBorderWidth={2}
         dayBorderColor="#ffffff"

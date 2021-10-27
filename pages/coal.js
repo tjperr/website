@@ -16,6 +16,7 @@ export default function Home() {
       <section className={utilStyles.headingMd}>
         <CallAPI />
       </section>
+      <br />
       This is a reimplemetation of{" "}
       <a href="https://www.theguardian.com/environment/ng-interactive/2019/may/25/the-power-switch-tracking-britains-record-coal-free-run">
         a graphic in the guardian
