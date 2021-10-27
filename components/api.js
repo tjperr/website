@@ -1,6 +1,8 @@
 import { ResponsiveCalendarCanvas, day } from "@nivo/calendar";
 import { useEffect, useState } from "react";
 
+import { BasicTooltip } from "@nivo/tooltip";
+
 function transform(response) {
   // transform the data to the formate expected by the calendar component
   return Object.entries(response).map((entry) => {
@@ -19,6 +21,7 @@ function minMaxDate(data) {
 }
 
 function colourScale() {
+  // generate the colour scale. Green, then fade from white to black
   var hex_numbers = [];
 
   for (let i = 16 * 16 - 1; i > 16 - 1; i--) {
@@ -32,8 +35,22 @@ function colourScale() {
   return cols;
 }
 
+function tooltip_function({ day, date, value, color, x, y, size }) {
+  // A custom tooltip to include the percent sign
+  return (
+    <BasicTooltip
+      id={day}
+      value={value.toString() + "%"}
+      color={color}
+      enableChip={true}
+    />
+  );
+}
 export function CallAPI() {
-  const [data, setData] = useState([{ value: 0, day: "2021-01-01" }]);
+  const [data, setData] = useState([
+    { value: 1, day: "2017-01-01" },
+    { value: 1, day: "2021-01-01" },
+  ]);
 
   useEffect(() => {
     fetch(
@@ -44,10 +61,10 @@ export function CallAPI() {
   }, []);
 
   return (
-    <div style={{ height: 500 }}>
+    <div style={{ height: 450 }}>
       <ResponsiveCalendarCanvas
         data={data}
-        maxValue={30}
+        maxValue={25}
         minValue={0}
         from={minMaxDate(data)[0]}
         to={minMaxDate(data)[1]}
@@ -70,6 +87,7 @@ export function CallAPI() {
             itemDirection: "right-to-left",
           },
         ]}
+        tooltip={tooltip_function}
       />
     </div>
   );

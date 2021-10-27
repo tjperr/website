@@ -17,20 +17,27 @@ export default function Home() {
       <section className={utilStyles.headingMd}>
         <h2>Personal Projects</h2>
         <p>
-          <a href="https://saffron-connect-four.herokuapp.com/">Connie</a>: Play
-          connect four against Connie, a neural network that's learnt to play by
-          playing thousands of games against itself.
+          <Link href="/coal">Coal Free</Link>
+          <br />A graphic showing the proportion of UK electricity generated
+          using coal. Updated daily using a{" "}
+          <a href="https://github.com/tjperr/coal_free">backend</a> built on AWS
+          lambda.
         </p>
-
         <p>
-          <a href="https://awful-drawful.herokuapp.com/">Awful Drawful</a>: A
-          reimplemetation of the classic Jackbox party game.
+          <a href="https://saffron-connect-four.herokuapp.com/">Connie</a>
+          <br /> Play connect four against Connie, a neural network that's
+          learnt to play by playing thousands of games against itself.
+        </p>
+        <p>
+          <a href="https://awful-drawful.herokuapp.com/">Awful Drawful</a>
+          <br /> A reimplemetation of the classic Jackbox party game.
         </p>
         <p>
           <a href="https://tjperr.github.io/chromatic-polynomial/">
             Chromatic Polynomial Calculator
           </a>
-          : Draw a graph and calculate its chromatic polynomial, a function that
+          <br />
+          Draw a graph and calculate its chromatic polynomial, a function that
           enumerates the colourings of the graph.
         </p>
       </section>
