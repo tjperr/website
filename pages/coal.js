@@ -11,8 +11,8 @@ export default function Home() {
         <title>Coal Free</title>
       </Head>
       <h2>Coal Free</h2>
-      The chart below shows the proportion of UK electricity generated using
-      coal.
+      This chart shows the proportion of UK electricity generated using
+      coal:
       <section className={utilStyles.headingMd}>
         <CallAPI />
       </section>
@@ -20,8 +20,9 @@ export default function Home() {
       This is a reimplemetation of{" "}
       <a href="https://www.theguardian.com/environment/ng-interactive/2019/may/25/the-power-switch-tracking-britains-record-coal-free-run">
         a graphic in the guardian
-      </a>{" "}
-      which stopped updating in May 2021. Data sourced from the{" "}
+      </a>
+      , built as an excuse to learn some AWS skills - See the backend code {" "}
+      <a href="https://github.com/tjperr/coal_free">here</a>. The data is sourced from the{" "}
       <a href="https://www.elexon.co.uk/">ELEXON BMRS API</a>.
     </Layout>
   );
