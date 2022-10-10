@@ -12,8 +12,7 @@ export default function Home() {
       <section className={utilStyles.headingMd}>
         <p>
           Hi 👋 - I'm a Data Scientist and former{" "}
-          <Link href="/ac">Graph Theorist</Link> working at{" "}
-          <a href="https://capitalone.co.uk/">Capital One UK</a>.
+          <Link href="/ac">Graph Theorist</Link>.
         </p>
 
         <p>
