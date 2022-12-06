@@ -16,6 +16,14 @@ export default function Home() {
       <section className={utilStyles.headingMd}></section>
       <section className={utilStyles.headingMd}>
         <h2>Personal Projects</h2>
+
+        <br></br>
+        <p>
+        A collection of personal projects, built to learn various skills in data science and
+        development. Some are unfortunately unavailable since Heroku changed their free-tier offering.
+        </p>
+        <br></br>
+        
         <p>
           <Link href="/coal">Coal Free</Link>
           <br />A graphic showing the proportion of UK electricity generated
@@ -24,12 +32,14 @@ export default function Home() {
           lambda.
         </p>
         <p>
-          <a href="https://saffron-connect-four.herokuapp.com/">Connie</a>
+          <a href="https://saffron-connect-four.herokuapp.com/">Connie</a> {" "}
+          <span class="badge badge-warning">Unavailable</span> 
           <br /> Play connect four against Connie, a neural network that's
           learnt to play by playing thousands of games against itself.
         </p>
         <p>
-          <a href="https://awful-drawful.herokuapp.com/">Awful Drawful</a>
+          <a href="https://awful-drawful.herokuapp.com/">Awful Drawful</a> {" "}
+          <span class="badge badge-warning">Unavailable</span>
           <br /> A reimplemetation of the classic Jackbox party game.
         </p>
         <p>
