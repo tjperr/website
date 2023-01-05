@@ -49,7 +49,7 @@ function tooltip_function({ day, date, value, color, x, y, size }) {
 export function CallAPI() {
   const [data, setData] = useState([
     { value: 1, day: "2017-01-01" },
-    { value: 1, day: "2021-01-01" },
+    { value: 1, day: "2023-01-01" },
   ]);
 
   useEffect(() => {
