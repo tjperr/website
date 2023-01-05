@@ -47,9 +47,12 @@ function tooltip_function({ day, date, value, color, x, y, size }) {
   );
 }
 export function CallAPI() {
+  
+  const currentDate = new Date().toJSON().slice(0, 10);
+
   const [data, setData] = useState([
     { value: 1, day: "2017-01-01" },
-    { value: 1, day: "2023-01-01" },
+    { value: 1, day: currentDate },
   ]);
 
   useEffect(() => {
