@@ -19,11 +19,9 @@ export default function Home() {
 
         <br></br>
         <p>
-        A collection of personal projects, built to learn various skills in data science and
-        development. Some are unfortunately unavailable since Heroku changed their free-tier offering.
+          A collection of personal projects, built to learn various skills in data science and
+          software development.
         </p>
-        <br></br>
-        
         <p>
           <Link href="/coal">Coal Free</Link>
           <br />A graphic showing the proportion of UK electricity generated
@@ -32,23 +30,23 @@ export default function Home() {
           lambda.
         </p>
         <p>
-          <a href="https://saffron-connect-four.herokuapp.com/">Connie</a> {" "}
-          <span class="badge badge-warning">Unavailable</span> 
-          <br /> Play connect four against Connie, a neural network that's
-          learnt to play by playing thousands of games against itself.
-        </p>
-        <p>
-          <a href="https://awful-drawful.herokuapp.com/">Awful Drawful</a> {" "}
-          <span class="badge badge-warning">Unavailable</span>
-          <br /> A reimplemetation of the classic Jackbox party game.
-        </p>
-        <p>
           <a href="https://tjperr.github.io/chromatic-polynomial/">
-            Chromatic Polynomial Calculator
+          Chromatic Polynomial Calculator
           </a>
           <br />
           Draw a graph and calculate its chromatic polynomial, a function that
           enumerates the colourings of the graph.
+        </p>
+        <p>
+          Connie {" "}
+          <span class="badge badge-secondary">Retired</span>
+          <br /> Play connect four against Connie, a neural network that's
+          learnt to play by playing thousands of games against itself.
+        </p>
+        <p>
+          Awful Drawful {" "}
+          <span class="badge badge-secondary">Retired</span>
+          <br /> A reimplemetation of the classic Jackbox party game.
         </p>
       </section>
     </Layout>
